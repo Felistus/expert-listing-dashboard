@@ -44,6 +44,15 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+
+  --color-nav-background-green: var(--nav-background-green);
+  --color-nav-item-active-green: var(--nav-item-active-green);
+  --color-nav-item-gray: var(--nav-item-gray);
+  --color-nav-item-hover-green: var(--nav-item-hover-green);
+  --color-card-light-green: var(--card-light-green);
+  --color-card-deep-green: var(--card-deep-green);
+  --color-card-purpler: var(--card-purple);
+  --color-card-error-red: var(--card-error-red);
 }
 
 :root {
@@ -79,6 +88,15 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  --nav-background-green: #105B48;
+  --nav-item-active-green: #176D58;
+  --nav-item-hover-green: #176D5826;
+  --nav-item-gray: #3D3D3D;
+  --card-light-green: #12B76A;
+  --card-deep-green: #14B8A6;
+  --card-purple: #4545FE;
+  --card-error-red: #F04438;
 }
 
 .dark {
@@ -119,6 +137,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
