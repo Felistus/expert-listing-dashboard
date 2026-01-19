@@ -65,7 +65,7 @@ export default function Home() {
         </div>
       </main>
 
-      <button className="fixed bottom-44 right-44 w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-gray-800 transition-colors">
+      <button className="fixed bottom-8 right-8 w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-gray-800 transition-colors">
         <MessagesSquare size={24} />
       </button>
     </div>
