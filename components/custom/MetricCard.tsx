@@ -9,25 +9,25 @@ type MetricCardProps = {
   color?: "blue" | "green" | "purple" | "red";
 };
 
+const colorClasses = {
+  blue: "text-blue-600 bg-blue-50",
+  green: "text-green-600 bg-green-50",
+  purple: "text-teal-400 bg-purple-50",
+  red: "text-red-600 bg-red-50",
+};
+
 const MetricCard = ({
   value,
   label,
   trend = 0,
   color = "blue",
 }: MetricCardProps) => {
-  const colorClasses = {
-    blue: "text-blue-600 bg-blue-50",
-    green: "text-green-600 bg-green-50",
-    purple: "text-purple-600 bg-purple-50",
-    red: "text-red-600 bg-red-50",
-  };
-
   const TrendIcon = trend > 0 ? ArrowUp : ArrowDown;
-  const trendColor = trend > 0 ? "text-green-700 " : "text-red-700";
+  const trendText = trend > 0 ? "text-green-700 " : "text-red-700";
   const trendBg = trend > 0 ? "bg-green-300" : "bg-red-300";
 
   return (
-    <div className="bg-white rounded-xl p-3.25 border border-gray-100">
+    <div className="bg-white rounded-xl p-3.25 border border-gray-100 ">
       <div className="flex items-start justify-between ">
         <div>
           <div
@@ -41,7 +41,7 @@ const MetricCard = ({
             </div>
             {trend && (
               <div
-                className={`flex items-center gap-1 text-xs font-medium ${trendColor}`}
+                className={`flex items-center gap-1 text-xs font-medium ${trendText}`}
               >
                 <div
                   className={`rounded-full flex items-center justify-center w-3 h-3 ${trendBg} `}

@@ -1,75 +1,13 @@
-// // Chart Component
-// const BarChart = () => {
-//   const months = [
-//     "Jan",
-//     "Feb",
-//     "Mar",
-//     "Apr",
-//     "May",
-//     "Jun",
-//     "Jul",
-//     "Aug",
-//     "Sep",
-//   ];
-//   const data = [
-//     [30, 15, 10],
-//     [25, 28, 20],
-//     [18, 22, 15],
-//     [28, 18, 12],
-//     [22, 15, 20],
-//     [48, 8, 5],
-//     [35, 28, 22],
-//     [25, 28, 18],
-//     [40, 32, 25],
-//   ];
-
-//   return (
-//     <div className="flex items-end justify-between h-64 px-4">
-//       {months.map((month, idx) => (
-//         <div key={month} className="flex flex-col items-center gap-1 flex-1">
-//           <div className="flex items-end gap-0.5 w-full justify-center h-full">
-//             <div
-//               className="bg-blue-500 w-2 rounded-t"
-//               style={{ height: `${data[idx][0]}%` }}
-//             />
-//             <div
-//               className="bg-green-500 w-2 rounded-t"
-//               style={{ height: `${data[idx][1]}%` }}
-//             />
-//             <div
-//               className="bg-red-500 w-2 rounded-t"
-//               style={{ height: `${data[idx][2]}%` }}
-//             />
-//           </div>
-//           <span className="text-xs text-gray-500 mt-2">{month}</span>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-// export default BarChart;
-
+// Chart Component
 "use client";
 
-import { TrendingUp } from "lucide-react";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
-
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
   type ChartConfig,
 } from "@/components/ui/chart";
-
-export const description = "A multiple bar chart";
 
 const chartData = [
   { month: "January", buy: 186, rent: 80, commercial: 40 },

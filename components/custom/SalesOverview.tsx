@@ -42,7 +42,7 @@ const SalesOverview = () => (
       <SortBTN label="1 Year" active />
     </div>
 
-    <div className="flex gap-4 pr-5">
+    <div className="flex gap-4 pr-5 pb-5">
       <div className="flex-1 ">
         <MyBarchart />
       </div>

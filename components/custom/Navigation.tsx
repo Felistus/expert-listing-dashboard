@@ -16,7 +16,7 @@ const NavItem = ({ icon: Icon, label, active = false }: NavItemProps) => (
   <button
     className={`flex items-center gap-2 px-8 py-1.75 rounded-xl transition-colors text-sm ${
       active
-        ? "bg-nav-item-hover-green text-nav-item-active-green font-semibold"
+        ? "bg-nav-item-hover-green text-nav-item-active-green font-semibold cursor-pointer"
         : "text-nav-item-gray font-normal"
     }`}
   >
