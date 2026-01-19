@@ -4,7 +4,7 @@ import OverviewCard from "@/components/custom/Overview";
 import PropertyCard from "@/components/custom/PropertyCard";
 import SalesOverview from "@/components/custom/SalesOverview";
 import StatsGrid from "@/components/custom/StatsGrid";
-import { MessageCircle } from "lucide-react";
+import { MessagesSquare } from "lucide-react";
 
 export default function Home() {
   return (
@@ -65,8 +65,8 @@ export default function Home() {
         </div>
       </main>
 
-      <button className="fixed bottom-8 right-8 w-14 h-14 bg-gray-900 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-gray-800 transition-colors">
-        <MessageCircle size={24} />
+      <button className="fixed bottom-44 right-44 w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-gray-800 transition-colors">
+        <MessagesSquare size={24} />
       </button>
     </div>
   );
