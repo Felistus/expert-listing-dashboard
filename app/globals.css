@@ -53,6 +53,7 @@
   --color-card-deep-green: var(--card-deep-green);
   --color-card-purple: var(--card-purple);
   --color-card-error-red: var(--card-error-red);
+  --color-modal-bg: var(--modal-bg);
 }
 
 :root {
@@ -97,6 +98,7 @@
   --card-deep-green: #14B8A6;
   --card-purple: #4545FE;
   --card-error-red: #F04438;
+  --modal-bg: #0C2841;
 }
 
 .dark {

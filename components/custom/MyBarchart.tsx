@@ -24,7 +24,7 @@ const chartData = [
 const chartConfig = {
   buy: {
     label: "Buy",
-    color: "var(--color-card-purpler)",
+    color: "var(--color-card-purple)",
   },
   rent: {
     label: "Rent",
