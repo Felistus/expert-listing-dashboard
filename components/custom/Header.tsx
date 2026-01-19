@@ -10,6 +10,8 @@ import Shop from "../icons/Shop";
 import React from "react";
 import BudgetModal from "../modals/Budget";
 import CalendarSheet from "../drawers/Calendar";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import { UserDropdownMenu } from "./UserDropdownMenu";
 
 type IconButtonProps = {
   children: React.ReactNode;
@@ -29,6 +31,7 @@ const IconButton = ({ children, className = "", onClick }: IconButtonProps) => (
 function Header() {
   const [openBudgetModal, setOpenBudgetModal] = React.useState(false);
   const [openCalendarDrawer, setOpenCalendarDrawer] = React.useState(false);
+  const [openUserDropdown, setOpenUserDropdown] = React.useState(false);
   return (
     <>
       <header className="bg-nav-background-green py-5.5 ">
@@ -56,9 +59,32 @@ function Header() {
             <IconButton>
               <Shop />
             </IconButton>
-            <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center cursor-pointer font-bold text-[#1e6b5e]">
-              D
-            </div>
+
+            <Tooltip>
+              <TooltipTrigger>
+                <UserDropdownMenu
+                  open={openUserDropdown}
+                  setOpen={setOpenUserDropdown}
+                />
+              </TooltipTrigger>
+              <TooltipContent
+                className={`bg-gray-100 p-4 ${openUserDropdown ? "hidden" : ""}`}
+              >
+                <div className="flex gap-3 items-center">
+                  <div className="w-10 h-10 rounded-full text-white flex items-center justify-center cursor-pointer font-bold bg-nav-background-green">
+                    D
+                  </div>
+                  <div>
+                    <p className="font-semibold text-base text-black">
+                      Dylan Frank
+                    </p>
+                    <p className="font-normal text-gray-700">
+                      dylan96@gmail.com
+                    </p>
+                  </div>
+                </div>
+              </TooltipContent>
+            </Tooltip>
           </div>
         </div>
       </header>
