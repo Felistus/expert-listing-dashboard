@@ -20,7 +20,7 @@ const SortBTN = ({ label, active = false }: NavItemProps) => (
 );
 
 const SalesOverview = () => (
-  <div className="bg-white rounded-2xl border border-gray-200 shadow-xs">
+  <div className="bg-white rounded-3xl border border-gray-200 shadow-xs">
     <div className="flex items-center justify-between mb-4.25 p-5 ">
       <div>
         <h2 className="text-xl font-semibold text-black">Sales Overview</h2>
