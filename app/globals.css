@@ -54,6 +54,8 @@
   --color-card-purple: var(--card-purple);
   --color-card-error-red: var(--card-error-red);
   --color-modal-bg: var(--modal-bg);
+  --color-drawer-header-bg: var(--drawer-header-bg);
+  --color-drawer-bg: var(--drawer-bg);
 }
 
 :root {
@@ -99,6 +101,8 @@
   --card-purple: #4545FE;
   --card-error-red: #F04438;
   --modal-bg: #0C2841;
+  --drawer-header-bg: #171717;
+  --drawer-bg: #0D0D0D;
 }
 
 .dark {

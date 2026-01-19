@@ -9,6 +9,7 @@ import Wallet from "../icons/Wallet";
 import Shop from "../icons/Shop";
 import React from "react";
 import BudgetModal from "../modals/Budget";
+import CalendarSheet from "../drawers/Calendar";
 
 type IconButtonProps = {
   children: React.ReactNode;
@@ -42,7 +43,7 @@ function Header() {
             </IconButton>
             <IconButton
               className="cursor-pointer"
-              onClick={() => console.log("calculate")}
+              onClick={() => setOpenCalendarDrawer(true)}
             >
               <Calendar />
             </IconButton>
@@ -62,6 +63,10 @@ function Header() {
         </div>
       </header>
       <BudgetModal open={openBudgetModal} setOpen={setOpenBudgetModal} />
+      <CalendarSheet
+        open={openCalendarDrawer}
+        setOpen={setOpenCalendarDrawer}
+      />
     </>
   );
 }
